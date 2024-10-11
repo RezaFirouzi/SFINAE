@@ -7,7 +7,6 @@ include_directories(SFINAE_1 PRIVATE "${PROJECT_SOURCE_DIR}/inc")
 
 function(add_sfinae_executable target_name source_file)
     add_executable(${target_name} ${source_file})
-    target_include_directories(${target_name}  PRIVATE "${PROJECT_SOURCE_DIR}/inc")
 endfunction()
 
 add_sfinae_executable(SFINAE_0 src/SFINAE_0.cpp)
