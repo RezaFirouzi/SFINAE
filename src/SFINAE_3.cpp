@@ -21,6 +21,10 @@ public:
 
     // The immediate context for a function template consists of its template parameter list and its return type
     // If either its template parameter list or its return type is invalid, the function is SFINAEd out
+
+    // If S in not an integral type, the type function tInteger_t<S> returns nothing, which SFINAEs out the member function
+    // If S and T are of the same typ, then the type function tSameType_t<S, T> yields a valid type, otherwise, tSameType_t<S, T> does not
+    // return anything, which effectively, SFINAEs out this member function.
     template <typename S, typename = tInteger_t<S>>
     tSameType_t<S, T> operator%(S rhs)
     {
