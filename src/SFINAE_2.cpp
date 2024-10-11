@@ -11,9 +11,9 @@
 
 template <typename T,
             typename = tInteger_t<T>> // This SFINAE out any non-integral type
-class tModulo
+struct tModulo
 {
-protected:
+private:
     T m_;
 
 public:
@@ -42,7 +42,7 @@ public:
     // the template arguments, we have to make member functions "template function"
 
     template <typename S, typename = tInteger_t<S>>
-    T operator%(T rhs)
+    T operator%(S rhs)
     {
         return m_ % rhs;
     }
@@ -66,13 +66,13 @@ int main()
 
     std::cout << a << " % " << b << " = " << (a % b) << "\n";
 
-    tModulo m{5};
-    double n{3.0};
-
-    std::cout << m << "%" << n << " = " << (m % n) << "\n";
-
-    tModulo x{5.0};
-    double y{3.0};
-
-    std::cout << x << "%" << y << " = " << (x % y) << "\n";
+    // tModulo m{5};
+    // double n{3.0};
+    //
+    // std::cout << m << "%" << n << " = " << (m % n) << "\n";
+    //
+    // tModulo x{5.0};
+    // double y{3.0};
+    //
+    // std::cout << x << "%" << y << " = " << (x % y) << "\n";
 }

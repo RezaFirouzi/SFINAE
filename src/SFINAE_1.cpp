@@ -11,9 +11,9 @@
 
 template <typename T,
             typename = tInteger_t<T>> // This SFINAE out any non-integral type
-class tModulo
+struct tModulo
 {
-protected:
+private:
     T m_;
 
 public:
@@ -48,8 +48,8 @@ int main()
 
     std::cout << m << "%" << n << " = " << (m % n) << "\n";
 
-    tModulo x{5.0};
-    double y{3.0};
-
-    std::cout << x << "%" << y << " = " << (x % y) << "\n";
+    // tModulo x{5.0};
+    // double y{3.0};
+    //
+    // std::cout << x << "%" << y << " = " << (x % y) << "\n";
 }
