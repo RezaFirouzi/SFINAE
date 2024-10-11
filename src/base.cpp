@@ -9,9 +9,9 @@ private:
 public:
     explicit tModulo(T m = T{}) : m_{m} {}
 
-    T operator%(T m)
+    T operator%(T rhs)
     {
-        return m_ % m;
+        return m_ % rhs;
     }
 
     friend std::ostream& operator<<(std::ostream& os, const tModulo& m)
@@ -33,8 +33,8 @@ int main()
 
     std::cout << a << " % " << b << " = " << (a % b) << "\n";
 
-    // tModulo<double> x{5.0};
-    // double y{3.0};
-    //
-    // std::cout << x << "%" << y << " = " << (x % y) << "\n";
+    tModulo x{5.0};
+    double y{3.0};
+
+    std::cout << x << "%" << y << " = " << (x % y) << "\n";
 }
