@@ -62,9 +62,13 @@ int main()
     // C++17 - class template argument type deduction
     tModulo a{5};
     int b{3};
-    // short b{3};
 
     std::cout << a << " % " << b << " = " << (a % b) << "\n";
+
+    tModulo c{5};
+    short d{3};
+
+    std::cout << c << " % " << d << " = " << (c % d) << "\n";
 
     // tModulo m{5};
     // double n{3.0};
