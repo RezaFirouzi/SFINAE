@@ -2,8 +2,8 @@
 #include <type_traits>
 
 #include "typeFunctions_a.h"
-#include "typeFunctions_b.h"
-//#include "typeFunctions_c.h"
+// #include "typeFunctions_b.h"
+// #include "typeFunctions_c.h"
 
 
 // We want the Modulo class to work only when the T in an integer
