@@ -17,7 +17,7 @@ protected:
     T m_;
 
 public:
-    tModulo(T m = T{}) : m_{m} {}
+    explicit tModulo(T m = T{}) : m_{m} {}
 
     T operator%(T rhs)
     {
