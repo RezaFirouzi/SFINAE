@@ -21,3 +21,7 @@ target_include_directories(SFINAE_3 PRIVATE "${PROJECT_SOURCE_DIR}/inc")
 add_executable(SFINAE_4
         src/SFINAE_4.cpp)
 target_include_directories(SFINAE_4 PRIVATE "${PROJECT_SOURCE_DIR}/inc")
+
+add_executable(SFINAE_5
+        src/SFINAE_5.cpp)
+target_include_directories(SFINAE_5 PRIVATE "${PROJECT_SOURCE_DIR}/inc")

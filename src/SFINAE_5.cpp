@@ -1,8 +1,10 @@
 #include <iostream>
+#include <type_traits>
 
 #include "typeFunctions_a.h"
 #include "typeFunctions_b.h"
-#include "typeFunctions_c.h"
+//#include "typeFunctions_c.h"
+
 
 // We want the Modulo class to work only when the T in an integer
 
@@ -28,7 +30,7 @@ public:
     // If S and T are of the same typ, then the type function tSameType_t<S, T> yields a valid type, otherwise, tSameType_t<S, T> does not
     // return anything, which effectively, SFINAEs out this member function.
     template <typename S, typename = tInteger_t<S>>
-    tEnableTrue_t<isSameType<S, T>, S> operator%(S rhs)
+    std::enable_if_t<std::is_same_v<S, T>, S> operator%(S rhs)
     {
         return m_ % rhs;
     }
