@@ -15,3 +15,8 @@ add_executable(SFINAE_2
         src/SFINAE_2.cpp)
 
 target_include_directories(SFINAE_2 PRIVATE "${PROJECT_SOURCE_DIR}/inc")
+
+add_executable(SFINAE_3
+        src/SFINAE_3.cpp)
+
+target_include_directories(SFINAE_3 PRIVATE "${PROJECT_SOURCE_DIR}/inc")
