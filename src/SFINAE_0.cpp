@@ -38,8 +38,8 @@ int main()
 
     std::cout << m << "%" << n << " = " << (m % n) << "\n";
 
-    tModulo x{5.0};
-    double y{3.0};
-
-    std::cout << x << "%" << y << " = " << (x % y) << "\n";
+    // tModulo x{5.0};
+    // double y{3.0};
+    //
+    // std::cout << x << "%" << y << " = " << (x % y) << "\n";
 }
