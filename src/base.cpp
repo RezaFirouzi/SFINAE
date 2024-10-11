@@ -33,6 +33,11 @@ int main()
 
     std::cout << a << " % " << b << " = " << (a % b) << "\n";
 
+    tModulo m{5};
+    double n{3.0};
+
+    std::cout << m << "%" << n << " = " << (m % n) << "\n";
+
     tModulo x{5.0};
     double y{3.0};
 
